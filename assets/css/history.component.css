@@ -1,0 +1,10 @@
+.container-order-history {
+  margin: 0 auto;
+  max-width: 1135px;
+  width: 100%;
+}
+
+.table-container,
+.footer-content {
+  width: 100%;
+}
