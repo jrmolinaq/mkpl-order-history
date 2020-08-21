@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { EmptyComponent } from './empty.component';
 import { OrderItemComponent } from './item.component';
+import { PaginatorComponent } from './paginator.component';
 
 import { ShortLargeStringsPipe } from './pipes/short-large-strings.pipe';
 
@@ -20,6 +21,7 @@ import { ShortLargeStringsPipe } from './pipes/short-large-strings.pipe';
 		AppComponent,
 		EmptyComponent,
 		OrderItemComponent,
+		PaginatorComponent,
 		ShortLargeStringsPipe
 	],
 	entryComponents: [AppComponent],

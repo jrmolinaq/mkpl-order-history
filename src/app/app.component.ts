@@ -15,8 +15,9 @@ declare const Liferay: any;
 		'/o/mkpl-order-history/app/app.component.html'
 })
 export class AppComponent {
-	// TODO data: Order;
-	data: OrderContent[];
+	// TODO 
+	data: Order;
+	// data: OrderContent[];
 	paginator: DataPaginator;
 	emptyOrders = EMPTY_ORDERS;
 	subsidiaryId: number;
@@ -32,15 +33,15 @@ export class AppComponent {
 	}
   
 	getOrders(page = 0) {
-	  /* TODO service
+	  // TODO service
 	  this.orderService
 		.getOrders({ page, status: 'finished', subsidiaryId: this.subsidiaryId})
 		.subscribe(({ data, dataPaginator }) => {
 		  this.data = data;
 		  this.paginator = dataPaginator;
 		});
-	  */
-	 this.data = this.orderService.getOrders2();
+
+	 //this.data = this.orderService.getOrders2();
 	}
   
 	currentPageChange(page: number) {

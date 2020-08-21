@@ -15,7 +15,7 @@
 
 	<h1 class="title-medium bold deep-sea-green m-bottom-8">Historial de pedidos</h1>
 	<!-- TODO le agregué .length y cambio de nombre el ng-template *ngIf="!data; else emptyData" -->
-	<empty *ngIf="!data.length; else listOrders" class="width-100" [data]="emptyOrders"></empty>
+	<empty *ngIf="!data; else listOrders" class="width-100" [data]="emptyOrders"></empty>
 	<ng-template #listOrders>
 	  <div class="table-container m-bottom-3" *ngFor="let order of data">
 		<order-item class="column table-container" [data]="order" [withOutTimer]="true"></order-item>
@@ -26,9 +26,9 @@
 		  tienen alguna particularidad en la entrega.
 		</span>
 	  </p>
-	  <!-- TODO pendiente paginador
+	  <!-- TODO pendiente paginador -->
 	  <paginator [paginator]="paginator" (page)="currentPageChange($event)"></paginator>
-	  -->
+	  
 	</ng-template>
 </div>
   

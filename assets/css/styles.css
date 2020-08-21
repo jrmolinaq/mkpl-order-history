@@ -13,6 +13,7 @@
 @import './empty.component.css';
 @import './history.component.css';
 @import './item.component.css';
+@import './paginator.component.css';
 
 html,
 body {
