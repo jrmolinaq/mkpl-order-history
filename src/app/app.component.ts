@@ -16,8 +16,8 @@ declare const Liferay: any;
 })
 export class AppComponent {
 	// TODO 
-	data: Order;
-	// data: OrderContent[];
+	//data: Order;
+	data: OrderContent[];
 	paginator: DataPaginator;
 	emptyOrders = EMPTY_ORDERS;
 	subsidiaryId: number;
@@ -34,14 +34,14 @@ export class AppComponent {
   
 	getOrders(page = 0) {
 	  // TODO service
-	  this.orderService
+	  /*this.orderService
 		.getOrders({ page, status: 'finished', subsidiaryId: this.subsidiaryId})
 		.subscribe(({ data, dataPaginator }) => {
 		  this.data = data;
 		  this.paginator = dataPaginator;
-		});
+		});*/
 
-	 //this.data = this.orderService.getOrders2();
+	 this.data = this.orderService.getOrders2();
 	}
   
 	currentPageChange(page: number) {
