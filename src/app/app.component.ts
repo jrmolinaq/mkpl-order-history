@@ -15,16 +15,12 @@ declare const Liferay: any;
 		'/o/mkpl-order-history/app/app.component.html'
 })
 export class AppComponent {
-	// TODO 
-	//data: Order;
-	data: OrderContent[];
+	data: Order;
 	paginator: DataPaginator;
 	emptyOrders = EMPTY_ORDERS;
 	subsidiaryId: number;
   
-	constructor(private orderService: OrderService,
-				//private location: Location
-				) { }
+	constructor(private orderService: OrderService) { }
   
 	ngOnInit() {
 		// TODO conseguir el subsidiaryId
@@ -33,22 +29,15 @@ export class AppComponent {
 	}
   
 	getOrders(page = 0) {
-	  // TODO service
-	  /*this.orderService
+	  this.orderService
 		.getOrders({ page, status: 'finished', subsidiaryId: this.subsidiaryId})
 		.subscribe(({ data, dataPaginator }) => {
 		  this.data = data;
 		  this.paginator = dataPaginator;
-		});*/
-
-	 this.data = this.orderService.getOrders2();
+		});
 	}
   
 	currentPageChange(page: number) {
 	  this.getOrders(page);
-	}
-  
-	goBack() {
-	  //this.location.back();
 	}
 }
